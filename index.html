@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Sundsvall Tätskikt AB</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<script>
+var prevScrollPos = window.pageYOffset;
+var up
+var down
+window.onscroll = function() {
+currentScrollPos = window.pageYOffset;
+	if(prevScrollPos > currentScrollPos && currentScrollPos > 400) {
+		console.log("up")
+		up = currentScrollPos
+		if(down - up > 600) {
+			document.getElementById("navbar").style.display = "block"
+		}
+	
+	} else {
+		console.log("down")
+		down = currentScrollPos
+		if(down - up > 10 || currentScrollPos < 400) {
+	  		document.getElementById("navbar").style.display = "none"
+		}
+	}
+	prevScrollPos = currentScrollPos
+}
+function hideNavOnClick() {
+  var x = document.getElementById("navbar");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div id="navbar" class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><img id="logo" src="logo.png"></a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right">
+      <a href="#about" class="w3-bar-item w3-button">Om oss</a>
+      <a href="#contact" class="w3-bar-item w3-button">Kontakt</a>
+    </div>
+  </div>
+</div>
+<!-- Navbar (does not sit on top) -->
+<div class="" id="home">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><img id="logo" src="logo.png"></a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right">
+      <p class="w3-border-bottom">Ring oss: <a class="w3-button" href="tel:0731415918">073-141 59 18</a></p>
+      <a href="#about" class="w3-bar-item w3-button">Om oss</a>
+      <a href="#contact" class="w3-bar-item w3-button">Kontakt</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;">
+  <img class="w3-image" src="banner.jpg" alt="Sundsvalls Tätskikt AB" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <img id="banner" class="w3-black w3-padding w3-opacity-min" src="logo-white.png">
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Välkommen till Sundsvalls tätskikt AB</h3>
+    <p> 
+	Vi är ett erfaret team av takläggare som specialiserar oss på takpapp. Med vårt fokus på kvalitet, professionalism och överlägsen service är vi dedikerade till att tillhandahålla pålitliga taklösningar för våra kunder.
+    </p>
+  </div>
+
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Våra tjänster</h3>
+  <div class="w3-container w3-padding-32" id="services">
+    <p>
+	<ul>
+<li>Takpappläggning: Vi har omfattande erfarenhet av takpappläggning och erbjuder högkvalitativa takpappsystem som är hållbara och pålitliga.</li>
+<li>Takinspektion och underhåll: Vi erbjuder takinspektionstjänster för att identifiera eventuella problem eller skador på ert tak och utför även regelbundet underhåll för att förlänga takets livslängd.</li>
+<li>Takreparation: Våra skickliga takläggare kan reparera och åtgärda olika takproblem, inklusive läckor, skador och fuktintrång.</li>
+	</ul>
+    </p>
+  </div>
+
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Varför välja oss?</h3>
+  <div class="w3-container w3-padding-32" id="whyus">
+    <p>
+	<ul>
+<li>Erfarenhet och kompetens: Med vårt erfarna team av takläggare kan ni vara säkra på att ert tak är i trygga händer. Vi har gedigen kunskap om takläggning och användning av takpapp.</li>
+<li>Kvalitetsmaterial: Vi använder endast högkvalitativa takpappmaterial och produkter för att säkerställa långvarig hållbarhet och skydd för ert tak.</li>
+<li>Pålitlig service: Välj oss för vår pålitlighet och professionella service. Vi håller våra åtaganden och strävar alltid efter att överträffa våra kunders förväntningar.</li>
+<li>Kundnöjdhet: Er tillfredsställelse är vår främsta prioritet. Vi arbetar nära er för att förstå era specifika behov och leverera skräddarsydda lösningar som passar er bäst.</li>
+	</ul>
+    </p>
+  </div>
+
+  <!-- Project Section -->
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Tidigare arbeten</h3>
+<div class="w3-container w3-padding-32" id="projects">
+	<p id="laddar">Laddar bilder...</p>
+  <div id="galleryContainer" class="gallery">
+  </div>
+</div>
+</br>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Kontakta oss</h3>
+    <p>Vill du veta mer? Kontakta oss för mer information och en kostnadsfri offert. Vi ser fram emot ditt samtal!</p>
+    <h4>Kontaktinfo</h4>
+    <h5>Telefon</h5>
+	<p><a href="tel:0731415918">073-141 59 18</a><p>
+    <h4>Skriv till oss</h4>
+  </div>
+  
+<!-- End page content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Sundsvalls Tätskikt AB 2023</p>
+</footer>
+
+<script>
+        // Define albums with their respective names
+        const albums = [
+            'album1',
+            // Add more albums as needed
+        ];
+
+        // Function to generate the image gallery
+        async function generateImageGallery() {
+            const galleryContainer = document.getElementById('galleryContainer');
+            galleryContainer.innerHTML = ''; // Clear existing content
+
+            // Loop through the albums
+            for (const album of albums) {
+                const albumContainer = document.createElement('div');
+                albumContainer.classList.add('album');
+
+                // Function to expand or collapse images in an album
+                function toggleImages() {
+                    const images = albumContainer.querySelectorAll('img');
+                    const hideButton = albumContainer.querySelector('.hide-button button');
+
+                    for (let i = 1; i < images.length; i++) {
+                        images[i].classList.toggle('hidden');
+                    }
+
+                    hideButton.textContent = images[1].classList.contains('hidden') ? 'Visa Fler' : 'Visa Mindre';
+                }
+
+                // Loop until an image does not exist (404 error)
+                let imageIndex = 0;
+                let imageExists = true;
+                while (imageExists) {
+                    const imgSrc = `images/${album}/resized_${imageIndex}.jpg`;
+                    const imgLink = `images/${album}/${imageIndex}.jpg`;
+                    const img = new Image();
+
+                    await new Promise((resolve, reject) => {
+                        img.onload = () => resolve();
+                        img.onerror = () => reject();
+                        img.src = imgSrc;
+                    })
+                        .then(() => {
+                            const linkElement = document.createElement('a');
+                            linkElement.href = imgLink;
+                            linkElement.target = '_blank';
+
+                            const imgElement = document.createElement('img');
+                            imgElement.src = imgSrc;
+
+                            if (imageIndex === 0) {
+                                imgElement.classList.add('first');
+                                const hideButtonContainer = document.createElement('div');
+                                hideButtonContainer.classList.add('hide-button');
+
+                                const hideButton = document.createElement('button');
+                                hideButton.textContent = 'Visa Fler';
+                                hideButton.addEventListener('click', toggleImages);
+                                hideButtonContainer.appendChild(hideButton);
+
+                                albumContainer.appendChild(hideButtonContainer);
+                            } else {
+                                imgElement.classList.add('hidden');
+                            }
+
+                            linkElement.appendChild(imgElement);
+                            albumContainer.appendChild(linkElement);
+                            imageIndex++;
+                        })
+                        .catch(() => {
+                            imageExists = false;
+                            laddar = document.getElementById("laddar");
+                            if(laddar != null){
+			laddar.remove();	
+				}
+                        });
+                }
+
+                if (imageIndex > 1) {
+                    albumContainer.classList.add('album');
+                }
+
+                galleryContainer.appendChild(albumContainer);
+            }
+        }
+
+        // Call the function to generate the image gallery
+        generateImageGallery();
+    </script>
+
+</body></html>
